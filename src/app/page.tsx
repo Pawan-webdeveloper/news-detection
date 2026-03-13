@@ -22,7 +22,7 @@ export default function Home() {
       let cursorCtx = gsap.context(() => {
         const cursor = cursorRef.current;
         if (!cursor) return;
-        
+
         // Move cursor
         window.addEventListener("mousemove", (e) => {
           gsap.to(cursor, {
@@ -47,7 +47,7 @@ export default function Home() {
       // Scroll Reveal Animations
       const reveals = gsap.utils.toArray('.reveal');
       reveals.forEach((element: any) => {
-        gsap.fromTo(element, 
+        gsap.fromTo(element,
           { opacity: 0, y: 30 },
           {
             opacity: 1,
@@ -73,19 +73,19 @@ export default function Home() {
             val: 30,
             duration: 2,
             ease: "power2.out",
-            onUpdate: function() { setStats(s => ({ ...s, speed: Math.floor(this.targets()[0].val) })) }
+            onUpdate: function () { setStats(s => ({ ...s, speed: Math.floor(this.targets()[0].val) })) }
           });
           gsap.to({ val: 0 }, {
             val: 11,
             duration: 2,
             ease: "power2.out",
-            onUpdate: function() { setStats(s => ({ ...s, languages: Math.floor(this.targets()[0].val) })) }
+            onUpdate: function () { setStats(s => ({ ...s, languages: Math.floor(this.targets()[0].val) })) }
           });
           gsap.to({ val: 0 }, {
             val: 500,
             duration: 2,
             ease: "power2.out",
-            onUpdate: function() { setStats(s => ({ ...s, sources: Math.floor(this.targets()[0].val) })) }
+            onUpdate: function () { setStats(s => ({ ...s, sources: Math.floor(this.targets()[0].val) })) }
           });
         }
       });
@@ -112,9 +112,9 @@ export default function Home() {
   return (
     <div ref={container} className="font-dmsans">
       {/* Custom Cursor */}
-      <div 
-        ref={cursorRef} 
-        id="custom-cursor" 
+      <div
+        ref={cursorRef}
+        id="custom-cursor"
         style={{ transform: "translate(-50%, -50%)" }}
       ></div>
 
@@ -138,13 +138,13 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
         <div className="max-w-5xl text-center z-10">
           <h1 className="font-syne text-6xl md:text-8xl leading-none mb-8">
-            INDIA’S FAKE NEWS PROBLEM IS REAL. <br/>
+            INDIA’S FAKE NEWS PROBLEM IS REAL. <br />
             <span className="text-[var(--color-sach-coral)]">SACHCHECK ISN’T.</span>
           </h1>
           <p className="max-w-2xl mx-auto text-xl md:text-2xl font-medium mb-10">
             Stop the spread of WhatsApp university forwards. Instant AI verification for the 1.4 billion voices of India.
           </p>
-          
+
           {/* WhatsApp Mockup Area */}
           <div className="relative max-w-2xl mx-auto mt-12 neo-card bg-white p-4 h-[400px] flex flex-col">
             <div className="bg-[#075E54] p-3 text-white rounded-t-lg flex items-center">
@@ -157,7 +157,7 @@ export default function Home() {
               </div>
               <div className="bg-[#DCF8C6] p-3 rounded-lg shadow-sm self-end max-w-[80%] text-sm border-2 border-[var(--color-sach-black)]">
                 <span className="block font-bold text-xs text-[var(--color-sach-coral)] mb-1">SACHCHECK BOT:</span>
-                ❌ This is FALSE. UNESCO does not give such awards. 
+                ❌ This is FALSE. UNESCO does not give such awards.
                 <a className="underline font-bold ml-1" href="#">Read Verification →</a>
               </div>
             </div>
@@ -184,7 +184,7 @@ export default function Home() {
           <p className="font-mono font-bold text-[var(--color-sach-coral)] mb-2 tracking-widest uppercase">The Engine</p>
           <h2 className="font-syne text-5xl md:text-6xl">HOW WE CATCH THE LIES.</h2>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-12">
           {/* Card 1 */}
           <div className="neo-card bg-white p-10 flex flex-col justify-between reveal">
@@ -194,7 +194,7 @@ export default function Home() {
               <p className="text-lg">NLP models trained specifically on Hinglish, Manglish, and regional slang to detect emotive manipulation.</p>
             </div>
           </div>
-          
+
           {/* Card 2 */}
           <div className="neo-card bg-[var(--color-sach-sky)] p-10 flex flex-col justify-between reveal">
             <div>
@@ -378,7 +378,7 @@ export default function Home() {
           <div className="text-white text-9xl font-syne">FACTS</div>
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <h2 className="font-syne text-6xl md:text-8xl text-white mb-10 leading-tight">SACH JAANO.<br/>SACH PHAILAO.</h2>
+          <h2 className="font-syne text-6xl md:text-8xl text-white mb-10 leading-tight">SACH JAANO.<br />SACH FAILAO.</h2>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             <button className="neo-button bg-[var(--color-sach-acid)] text-black px-12 py-5 text-xl">INSTALL WHATSAPP BOT</button>
             <button className="neo-button bg-white text-black px-12 py-5 text-xl">CHROME EXTENSION</button>
